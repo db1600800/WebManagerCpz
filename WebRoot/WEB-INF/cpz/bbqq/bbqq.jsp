@@ -72,7 +72,7 @@ dd:searchInput					},
 		}
 	</script>
 </head>
-<body>
+<body style="overflow:auto">
 	<div style="padding-left:20px;margin-bottom:10px;" >
 	<input type="hidden" id="dd" name="dd" value="" />
 	活动名称：<input type="text" id="searchInput" style="margin-left:10px;width:100px;height:20px; "/>

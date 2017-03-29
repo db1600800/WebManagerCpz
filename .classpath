@@ -106,16 +106,10 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/msv-core-2011.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql-connector-java-5.1.5-bin.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/neethi-3.0.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/oauth-20100527.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/oauth-provider-20100527.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/odadesignapi.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/odmg-3.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl-2.6.11.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl-2.7.3-osgi.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/opensaml-1.0.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/opensaml-2.5.1-1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/openws-1.4.2-1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.aop-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.asm-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.springframework.aspects-3.0.5.RELEASE.jar"/>
@@ -145,11 +139,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/qdox-1.5.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/quartz-1.5.2.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/quartz-all-1.6.0-osgi.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/relaxngDatatype-20020414.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/richfaces-api-3.2.2.GA.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/richfaces-impl-3.2.2.GA.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/richfaces-ui-3.2.2.GA.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/rome-0.9.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/scribe-1.0.3.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/scriptapi.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/serializer-2.7.1.jar"/>
