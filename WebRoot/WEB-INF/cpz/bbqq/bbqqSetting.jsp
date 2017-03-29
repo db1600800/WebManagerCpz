@@ -35,7 +35,7 @@ $(document).on('ready', function() {
 </script>
 </head>
 <body>
- <form action="BbQqAction!doUpdate.do" method="post" enctype="multipart/form-data" name="myForm">
+ <form action="BbQqAction!doUpdate.action" method="post" enctype="multipart/form-data" name="myForm">
 	<div style="margin-left: 20px;">测试</div>
 	<div class="table_form lr10">
 		<table width="100%" cellspacing="0" cellpadding="0">

@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+
 import net.sf.json.JSONObject;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.ServletActionContext;
@@ -17,6 +19,7 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
+
 
 import com.cpz.entity.BbQqEntity;
 import com.tools.CommonFunction;
@@ -89,15 +92,29 @@ public class BbQqAction {
 			argslist.add(dd);
 			argsMap.put("dd", dd);
 		}
-		StringBuffer sql = new StringBuffer(
+		
+		StringBuffer sql=null;
+		StringBuffer sb=null;
+		if(where.length()==0)
+		{
+			 sql = new StringBuffer(
+						"select count(*) from BbQqEntity  "
+								);
+				 sb = new StringBuffer(
+						" select a from BbQqEntity a   "
+								);
+		}else
+		{
+		 sql = new StringBuffer(
 				"select count(*) from BbQqEntity where "
 						+ where.substring(0, where.lastIndexOf("And")));
-		StringBuffer sb = new StringBuffer(
+		 sb = new StringBuffer(
 				" select a from BbQqEntity a  where "
 						+ where2.substring(0, where2.lastIndexOf("And")));
-
+		}
 		int size = argslist.size();
 		Object[] args = (Object[]) argslist.toArray(new String[size]);
+		
 		// sb.append(" order by activity_code desc");
 		int count = objectDao.countObjectByHql(sql.toString(), args);
 		List<BbQqEntity> list = (List<BbQqEntity>) objectDao.findByHqlPage(sb
@@ -107,7 +124,7 @@ public class BbQqAction {
 				.getPaginationHtml(Integer.valueOf(count), Integer
 						.valueOf(pageSize), Integer.valueOf(pageNo), Integer
 						.valueOf(2), Integer.valueOf(5),
-						"javascript:getAll('BbQqAction!list.do?dd=" + dd
+						"javascript:getAll('BbQqAction!list.action?dd=" + dd
 								+ "%26pageNo=", true);
 		pageString = pageString.replace(".html", "");
 		JSONObject jsonObject = new JSONObject();
@@ -170,15 +187,15 @@ public class BbQqAction {
 	public String doAdd() throws IOException {
 		HttpServletRequest request = StrutsParamUtils.getRequest();
 		// id 当前最大值加一
-		{
-			StringBuffer sb = new StringBuffer(
-					" select max(a.dd) from BbQqEntity a    ");
-			List argslist = new ArrayList();
-			List list = (List) objectDao.findByHql(sb.toString(), argslist
-					.toArray());
-			int max = Integer.valueOf((String) list.get(0));
-			entity.setDd(StrutsParamUtils.beforeAppend0(max + 1 + "") + "");
-		}
+//		{
+//			StringBuffer sb = new StringBuffer(
+//					" select max(a.dd) from BbQqEntity a    ");
+//			List argslist = new ArrayList();
+//			List list = (List) objectDao.findByHql(sb.toString(), argslist
+//					.toArray());
+//			int max = Integer.valueOf((String) list.get(0));
+//			entity.setDd(StrutsParamUtils.beforeAppend0(max + 1 + "") + "");
+//		}
 		objectDao.save(entity);// form表单提交过来的对象
 		request.setAttribute("dd", entity.getDd());
 		return "bbqq";
